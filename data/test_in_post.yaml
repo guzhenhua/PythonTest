@@ -1,0 +1,32 @@
+---
+tests:
+- case: 验证响应中title和body与请求中的参数一致
+  http:
+    method: POST
+    path: /posts
+    headers:
+      Content-Type: application/json
+    body:
+      title: foo
+      body: bar
+      userId: 1
+  expected:
+    response:
+      title: foo
+      body: bar
+      userId: 1
+- case: 验证响应中title2和body2与请求中的参数一致
+  http:
+    method: POST
+    path: /posts
+    headers:
+      Content-Type: application/json
+    body:
+      title: foo
+      body: bar
+      userId: 2
+  expected:
+    response:
+      title: foo
+      body: bar
+      userId: 2
