@@ -1,3 +1,4 @@
+#coding=utf-8
 import requests
 import pytest
 from utils.commonlib import get_test_data
